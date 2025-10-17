@@ -28,7 +28,7 @@ spring:
         # 2. ${HELLO_SERVICE_URI:http://localhost:8765}/abc 로 연결
 
         - id: def2abc2hello_ok_route
-          uri: http://localhost:8765
+          uri: ${HELLO_SERVICE_URI:http://localhost:8765}
           predicates:
             - Path=/def
           filters:
